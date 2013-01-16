@@ -101,7 +101,7 @@ You can also integrate other libraries by just mixing in their functions.
 
 Suppose you dont want to use `promise-extended` but instead `Q`.
 
-```
+```javascript
 var _ = extended
             .register(require("array-extended")
             .register(require("string-extended")
