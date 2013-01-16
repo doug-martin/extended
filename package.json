@@ -1,0 +1,28 @@
+{
+    "name": "extended",
+    "version": "0.0.1",
+    "description": "Additional string extensions with a chainable api",
+    "main": "index.js",
+    "scripts": {
+        "test": "it -r dot"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git:git@github.com:doug-martin/extended.git"
+    },
+    "keywords": [
+        "String",
+        "extender",
+        "utilities"
+    ],
+    "author": "Doug Martin",
+    "license": "MIT",
+    "dependencies": {
+        "extender": "0.0.4"
+    },
+    "devDependencies": {
+        "it": "~0.1.0",
+        "grunt-it": "~0.2.0",
+        "is-extended": "0.0.1"
+    }
+}
