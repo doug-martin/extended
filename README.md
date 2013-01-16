@@ -64,7 +64,7 @@ _.format("{first} {last}", {first : "Bob", last : "yukon"});
 
 //combination of object-extended, array-extended, and string-extended
 _({hello : "hello", "world"}).keys().map(function(key, index){
-    return _.format("%d key is %s", index + 1, key");
+    return _.format("%d key is %s", index + 1, key);
 }).value().join(";"); //"1 key is hello; 2 key is world"
 
 
