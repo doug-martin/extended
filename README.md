@@ -33,12 +33,12 @@ The register method allows you to register a library with extended.
 The following example makes use of
 
 * [`array-extended`](https://github.com/doug-martin/array-extended)
-* [`string-extended`](https://github.com/doug-martin/array-extended)
-* [`date-extended`](https://github.com/doug-martin/array-extended)
-* [`function-extended`](https://github.com/doug-martin/array-extended)
-* [`is-extended`](https://github.com/doug-martin/array-extended)
-* [`object-extended`](https://github.com/doug-martin/array-extended)
-* [`promise-extended`](https://github.com/doug-martin/array-extended)
+* [`string-extended`](https://github.com/doug-martin/string-extended)
+* [`date-extended`](https://github.com/doug-martin/date-extended)
+* [`function-extended`](https://github.com/doug-martin/function-extended)
+* [`is-extended`](https://github.com/doug-martin/is-extended)
+* [`object-extended`](https://github.com/doug-martin/object-extended)
+* [`promise-extended`](https://github.com/doug-martin/promise-extended)
 
 
 **Notice** how all the APIs are completely integrated together, so you can use the chaining API from each registered library in a single unified interface.
