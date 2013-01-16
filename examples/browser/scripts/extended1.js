@@ -40,12 +40,6 @@
         }
     }
 
-    function isInstanceOf(obj, clazz) {
-        return comb.array.some(argsToArray(arguments, 1), function (c) {
-            return isInstance(obj, c);
-        });
-    }
-
     function isRegExp(obj) {
         return !isUndefinedOrNull(obj) && (obj instanceof RegExp);
     }
@@ -79,7 +73,7 @@
         isUndefinedOrNull: isUndefinedOrNull,
         isNull: isNull,
         isArguments: isArguments,
-        isInstanceOf: isInstanceOf,
+        isInstanceOf: isInstance,
         isRegExp: isRegExp
     };
 
