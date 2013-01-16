@@ -10,7 +10,7 @@ Extended is also browser friendly so you can create a utility library that is re
 
 ## Why?
 
-Often times the libraries I end up using quite a few libraries in a single node project, this allows you to seamlessly integrate libraries into a single interface.
+Often times I end up using quite a few libraries in a single node project, `extended` allows you to seamlessly integrate libraries into a single interface.
 
 You also get the added benefit of replacing libraries without having to change you code every place that they were required.
 
