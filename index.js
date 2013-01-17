@@ -37,9 +37,7 @@
 
             //getInitial instance;
             var extended = extender.define();
-
-            merge(extended, {
-
+            extended.expose({
                 register: function register(alias, extendWith) {
                     if (!extendWith) {
                         extendWith = alias;
@@ -56,14 +54,24 @@
                         throw new TypeError("extended.register must be called with an extender function");
                     }
                     return extended;
+                },
+
+                define: function () {
+                    return extender.define.apply(extender, arguments);
                 }
             });
 
             return extended;
         }
 
-        var extended = getExtended();
-        extended.isolate = getExtended;
+        function extended() {
+            return getExtended();
+        }
+
+        extended.define = function define() {
+            return extender.define.apply(extender, arguments);
+        };
+
         return extended;
     }
 

@@ -7,7 +7,7 @@ var it = require('it'),
 it.describe("extended",function (it) {
     var isolated;
     it.beforeEach(function () {
-        isolated = extended.isolate();
+        isolated = extended();
     });
 
     it.describe(".register", function () {

@@ -45,7 +45,7 @@ The following example makes use of
 
 ```javascript
 
-var _ = extended
+var _ = extended()
             .register(require("array-extended")
             .register(require("string-extended")
             .register(require("date-extended")
@@ -76,7 +76,7 @@ If you want to namespace you API you can provide an alias.
 
 ```javascript
 
-var _ = extended
+var _ = extended()
             .register("array", require("array-extended")
             .register("string", require("string-extended")
             .register("date", require("date-extended")
@@ -102,7 +102,7 @@ You can also integrate other libraries by just mixing in their functions.
 Suppose you dont want to use `promise-extended` but instead `Q`.
 
 ```javascript
-var _ = extended
+var _ = extended()
             .register(require("array-extended")
             .register(require("string-extended")
             .register(require("date-extended")
