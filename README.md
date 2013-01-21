@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/doug-martin/extended.png?branch=master)](undefined)
 
+[![browser support](http://ci.testling.com/doug-martin/extended.png)](http://ci.testling.com/doug-martin/extended)
+
 # extended
 
 `extended` is a wrapper than sits on top of [`extender`](https://github.com/doug-martin/extender) than allows you to combine multiple libraries into a single API.
@@ -46,13 +48,13 @@ The following example makes use of
 ```javascript
 
 var _ = extended()
-            .register(require("array-extended")
-            .register(require("string-extended")
-            .register(require("date-extended")
-            .register(require("function-extended")
-            .register(require("is-extended")
-            .register(require("object-extended")
-            .register(require("promise-extended");
+            .register(require("array-extended"))
+            .register(require("string-extended"))
+            .register(require("date-extended"))
+            .register(require("function-extended"))
+            .register(require("is-extended"))
+            .register(require("object-extended"))
+            .register(require("promise-extended"));
 
 //now use your API!
 
@@ -77,13 +79,13 @@ If you want to namespace you API you can provide an alias.
 ```javascript
 
 var _ = extended()
-            .register("array", require("array-extended")
-            .register("string", require("string-extended")
-            .register("date", require("date-extended")
-            .register("fn", require("function-extended")
-            .register("is", require("is-extended")
-            .register("obj", require("object-extended")
-            .register("promise", require("promise-extended");
+            .register("array", require("array-extended"))
+            .register("string", require("string-extended"))
+            .register("date", require("date-extended"))
+            .register("fn", require("function-extended"))
+            .register("is", require("is-extended"))
+            .register("obj", require("object-extended"))
+            .register("promise", require("promise-extended"));
 
 //now use your API!
 
@@ -103,19 +105,40 @@ Suppose you dont want to use `promise-extended` but instead `Q`.
 
 ```javascript
 var _ = extended()
-            .register(require("array-extended")
-            .register(require("string-extended")
-            .register(require("date-extended")
-            .register(require("function-extended")
-            .register(require("is-extended")
-            .register(require("object-extended")
-            .register(require("q");
+            .register(require("array-extended"))
+            .register(require("string-extended"))
+            .register(require("date-extended"))
+            .register(require("function-extended"))
+            .register(require("is-extended"))
+            .register(require("object-extended"))
+            .register(require("q"));
 
 _.resolve("hello").then(function(hello){
     console.log("hello");
 })
 ```
 
+Or maybe you want to continue to use `underscore` with added functionality.
+
+```javascript
+
+//lets create a library with _, promises and an inheritance library.
+var _ = extended()
+            .register(require("_"))
+            .register(require("is-extended"))
+            .register(require("promise-extended"))
+            .register(require("declare.js"));
+
+var Person = _.declare({
+    constructor: function(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+});
+
+var
+
+```
 
 
 

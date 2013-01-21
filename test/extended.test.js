@@ -40,6 +40,6 @@ it.describe("extended",function (it) {
 
     });
 
-}).as(module).run();
+}).as(module);
 
 
