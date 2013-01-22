@@ -1,6 +1,6 @@
 {
     "name": "extended",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Additional string extensions with a chainable api",
     "main": "index.js",
     "scripts": {
@@ -28,7 +28,7 @@
     "author": "Doug Martin",
     "license": "MIT",
     "dependencies": {
-        "extender": "0.0.4"
+        "extender": "0.0.5"
     },
     "devDependencies": {
         "it": "~0.2.0",
