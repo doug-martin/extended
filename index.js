@@ -1,8 +1,8 @@
 (function () {
     "use strict";
-    /*global extender isa, dateExtended*/
+    /*global extender is, dateExtended*/
 
-    function defineExtended(extender, require) {
+    function defineExtended(extender) {
 
 
         var merge = (function merger() {
@@ -77,12 +77,12 @@
 
     if ("undefined" !== typeof exports) {
         if ("undefined" !== typeof module && module.exports) {
-            module.exports = defineExtended(require("extender"), require);
+            module.exports = defineExtended(require("extender"));
 
         }
     } else if ("function" === typeof define) {
-        define(["require"], function (require) {
-            return defineExtended(require("extender"), require);
+        define(["extender"], function (extender) {
+            return defineExtended(extender);
         });
     } else {
         this.extended = defineExtended(this.extender);
